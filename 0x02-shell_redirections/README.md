@@ -9,3 +9,4 @@
 8-cwd_state- Writes the ls -la command into a new file
 9-duplicate_last_line- Creates a duplicate of the last line in iacta file
 10-no_more_js- deletes files with .js extension in it
+11-directories- Deletes all regular directories with .js extension
