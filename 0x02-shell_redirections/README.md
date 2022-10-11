@@ -6,3 +6,4 @@
 5-firstlines- Displays the first 10 lines of a /etc/passwd
 6-third_line- Displays the third line in a file
 7-file- Creates a file with Best School in the file
+8-cwd_state- Writes the ls -la command into a new file
