@@ -14,3 +14,5 @@
 13-unique- prints words once from input list
 14-findthatword- displays lines with pater root
 15-countthatword- counts the number of lines in a file
+16-whatsnext- checks the numbers after a specific command
+17-hidethisword- displays all lines without the word bin
