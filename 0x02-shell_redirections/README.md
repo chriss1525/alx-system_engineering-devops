@@ -10,3 +10,4 @@
 9-duplicate_last_line- Creates a duplicate of the last line in iacta file
 10-no_more_js- deletes files with .js extension in it
 11-directories- Deletes all regular directories with .js extension
+12-newest_files- displays 10 newest files in the directory
