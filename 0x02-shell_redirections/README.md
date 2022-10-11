@@ -11,3 +11,4 @@
 10-no_more_js- deletes files with .js extension in it
 11-directories- Deletes all regular directories with .js extension
 12-newest_files- displays 10 newest files in the directory
+13-unique- prints words once from input list
