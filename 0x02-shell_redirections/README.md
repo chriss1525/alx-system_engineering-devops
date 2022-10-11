@@ -13,3 +13,4 @@
 12-newest_files- displays 10 newest files in the directory
 13-unique- prints words once from input list
 14-findthatword- displays lines with pater root
+15-countthatword- counts the number of lines in a file
