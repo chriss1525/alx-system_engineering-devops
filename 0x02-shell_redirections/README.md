@@ -5,3 +5,4 @@
 4-lastlines- displays the first 10 lines of /etc/passwd
 5-firstlines- Displays the first 10 lines of a /etc/passwd
 6-third_line- Displays the third line in a file
+7-file- Creates a file with Best School in the file
