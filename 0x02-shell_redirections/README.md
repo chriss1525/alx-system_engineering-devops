@@ -7,3 +7,4 @@
 6-third_line- Displays the third line in a file
 7-file- Creates a file with Best School in the file
 8-cwd_state- Writes the ls -la command into a new file
+9-duplicate_last_line- Creates a duplicate of the last line in iacta file
