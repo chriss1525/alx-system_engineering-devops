@@ -2,7 +2,10 @@
 # This script prints Bash School 10 times
 
 i=1
-until [ $i -gt 10 ]; do
+while [ $i -le 10 ]; do
     echo "Best School"
+    if [ $i == 9 ]; then
+        echo Hi
+    fi
     ((i += 1))
 done
