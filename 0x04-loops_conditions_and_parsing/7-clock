@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script prints Bash School 10 times
+# This script prints every second of 12 hours
 
 i=0
 j=1
