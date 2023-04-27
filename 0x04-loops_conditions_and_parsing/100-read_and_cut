@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# This script prints Bash School 10 times
+
+while read -r line; do
+  username=$(echo "$line" | cut -d: -f1)
+  uid=$(echo "$line" | cut -d: -f3)
+  homedir=$(echo "$line" | cut -d: -f6)
+  echo "$username"
+  echo "$uid"
+  echo "$homedir"
+done < /etc/passwd
+
