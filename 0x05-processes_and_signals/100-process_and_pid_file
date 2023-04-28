@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# create filename containing PID
+# Create PID file
+echo $$ >/var/run/myscript.pid
+
+# Define signal handlers
+function sigterm_handler() {
+    echo "I hate the kill command"
+    exit 0
+}
+
+function sigint_handler() {
+    echo "Y U no love me?!"
+}
+
+function sigquit_handler() {
+    rm /var/run/myscript.pid
+    exit 0
+}
+
+trap sigterm_handler SIGTERM
+trap sigint_handler SIGINT
+trap sigquit_handler SIGQUIT
+
+# Main loop
+while true; do
+    echo "To infinity and beyond indefinitely"
+    sleep 1
+done
