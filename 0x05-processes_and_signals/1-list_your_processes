@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+# print list of current running processes
+ps -ef
