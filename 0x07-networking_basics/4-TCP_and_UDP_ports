@@ -1,3 +1,3 @@
 #!/bin/bash
-# listening ports
+# display listening ports
 netstat -lp
