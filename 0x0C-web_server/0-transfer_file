@@ -6,9 +6,11 @@ IP="$2"
 USERNAME="$3"
 PATH_TO_SSH_KEY="$4"
 
-if [ -z "$client_file_path" ] || [ -z "$server_address" ] || [ -z "$username" ] || [ -z "$ssh_key_path" ]; then
+if ["$#" -lt 3]; then
     echo "Usage: 0-transfer_file PATH_TO_FILE IP USERNAME PATH_TO_SSH_KEY"
     exit 1
+  elif [ ! -f "$PATH_TO_SSH_KEY" ]; then
+    scp -i "$PATH_TO_FILE" "$USERNAME"@"$IP":/home/"$USERNAME"/
 fi
 
 # Transfer file
