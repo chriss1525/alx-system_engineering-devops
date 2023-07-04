@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# install apache web server if it doesn't exist
+apt install apache2
+
+# fix/start apache server in docker container
+service apache2 start
+
