@@ -33,17 +33,21 @@ defaults
 	errorfile 503 /etc/haproxy/errors/503.http
 	errorfile 504 /etc/haproxy/errors/504.http
 
-frontend haproxy_balancer
-    bind *:443 ssl crt /etc/letsencrypt/live/www.okoth.tech/fullchain.pem
-    mode http
-    default_backend webservers
-    http-request set-header X-Served-By %[req.haproxy-ssl-cn]
-    
-backend webservers
-    balance roundrobin
-    server 166231-web-01 100.25.0.75:80 check
-    server 166231-web-02 34.204.95.3:80 check
-    http-response set-header X-Served-By %[req.haproxy-ssl-cn]
-    http-response set-header X-Holberton "Holberton School"
+# start of parameters for okoth.tech
+frontend okoth.tech-http-frontend
+	bind	 *:80
+	http-request set-header X-Forwarded-Proto http
+	default_backend	 okoth.tech-backend
 
 
+frontend  okoth.tech-https-frontend
+	bind *:443 ssl crt /etc/letsencrypt/live/www.okoth.tech/fullchain.pem 
+	http-request set-header X-Forwarded-Proto https
+        default_backend okoth.tech-backend
+
+
+backend okoth.tech-backend
+        balance roundrobin
+		server 166231-web-01 100.25.0.75:80 check
+		server 166231-web-02 34.204.95.3:80 check
+# end of parameters
