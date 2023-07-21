@@ -34,20 +34,16 @@ defaults
 	errorfile 504 /etc/haproxy/errors/504.http
 
 # start of parameters for okoth.tech
-frontend okoth.tech-http-frontend
-	bind	 *:80
-	http-request set-header X-Forwarded-Proto http
-	default_backend	 okoth.tech-backend
+frontend 166231-web
+    	bind *:80
+    	bind *:443 ssl crt /etc/letsencrypt/live/www.okoth.tech/fullchain.pem /etc/letsencrypt/live/www.okoth.tech/privkey.pem
+    	# Redirect if HTTPS is not used
+    	redirect scheme https code 301 if !{ ssl_fc }
 
+    	default_backend 166231-web_servers
 
-frontend  okoth.tech-https-frontend
-	bind *:443 ssl crt /etc/letsencrypt/live/www.okoth.tech/fullchain.pem 
-	http-request set-header X-Forwarded-Proto https
-        default_backend okoth.tech-backend
-
-
-backend okoth.tech-backend
-        balance roundrobin
-		server 166231-web-01 100.25.0.75:80 check
-		server 166231-web-02 34.204.95.3:80 check
+backend 166231-web_servers
+    	balance roundrobin
+    	server web-01 100.25.0.75:80 check
+    	server web-02 54.237.0.77:80 check
 # end of parameters
