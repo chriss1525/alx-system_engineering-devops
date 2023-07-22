@@ -36,7 +36,7 @@ defaults
 # start of parameters for okoth.tech
 frontend 166231-web
     	bind *:80
-    	bind *:443 ssl crt /etc/letsencrypt/live/www.okoth.tech/fullchain.pem /etc/letsencrypt/live/www.okoth.tech/privkey.pem
+    	bind *:443 ssl crt /etc/letsencrypt/live/www.okoth.tech/newfullchain.pem
     	# Redirect if HTTPS is not used
     	redirect scheme https code 301 if !{ ssl_fc }
 
