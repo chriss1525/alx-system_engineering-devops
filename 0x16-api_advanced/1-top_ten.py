@@ -5,6 +5,7 @@
 
 import requests
 
+
 def top_ten(subreddit):
     """Function to print the top 10 hot posts of a subreddit"""
     url = 'https://www.reddit.com/r/{}/hot.json'.format(subreddit)
@@ -17,6 +18,7 @@ def top_ten(subreddit):
             print(post.get('data').get('title'))
     else:
         print(None)
+
 
 if __name__ == '__main__':
     top_ten(input('Subreddit: '))
