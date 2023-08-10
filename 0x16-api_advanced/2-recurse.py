@@ -1,17 +1,16 @@
 #!/usr/bin/python3
 # -*- coding: utf-8 -*-
 
-""" return list containing the titles\
-    of all hot articles for a given subreddit """
+""" return list containing the titles of\
+    all hot articles for a given subreddit """
 
 import requests
 
-
 def recurse(subreddit, hot_list=[], after=None):
-    """ return list containing the titles\
-        of all hot articles for a given subreddit """
+    """ return list containing the titles of\
+        all hot articles for a given subreddit """
     url = "https://www.reddit.com/r/{}/hot.json".format(subreddit)
-    headers = {'User-Agent': 'This File'}
+    headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)'}
     params = {'after': after}
     response = requests.get(url, headers=headers, params=params,
                             allow_redirects=False)
@@ -28,5 +27,5 @@ def recurse(subreddit, hot_list=[], after=None):
         return None
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     recurse(subreddit)
