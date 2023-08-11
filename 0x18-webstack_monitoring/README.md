@@ -4,29 +4,33 @@
 [Prerequisites](#Prerequisites)
 
 
-[Getting Datadog API Key](#Getting Datadog API Key)
+[Getting Datadog API Key](#Getting-Datadog-API-Key)
 
 
-[Installing Datadog Agent on Ubuntu](#Installing Datadog Agent on Ubuntu)
-[Creating a Monitoring Dashboard](#Creating a Monitoring Dashboard)
-[Tracking Read and Write Metrics](#Tracking Read and Write Metrics)
+[Installing Datadog Agent on Ubuntu](#Installing-Datadog-Agent-on-Ubuntu)
+
+
+[Creating a Monitoring Dashboard](#Creating-a-Monitoring-Dashboard)
+
+
+[Tracking Read and Write Metrics](#Tracking-Read-and-Write-Metrics)
 
 
 ## Prerequisites
-Datadog account (Sign up at Datadog)
-Ubuntu machine
+- Datadog account (Sign up at Datadog)
+- Ubuntu machine
 
 ## Getting Datadog API Key
-Log in to your Datadog account.
-In the Datadog application, navigate to Integrations > APIs.
-Generate a new API key.
-Copy the API key for future use.
+- Log in to your Datadog account.
+- In the Datadog application, navigate to Integrations > APIs.
+- Generate a new API key.
+- Copy the API key for future use.
 
 
 ## Installing Datadog Agent on Ubuntu
-SSH into your Ubuntu machine.
+- SSH into your Ubuntu machine.
 
-Run the following commands to install the Datadog Agent:
+- Run the following commands to install the Datadog Agent:
 
 ```bash
 Copy code
@@ -35,16 +39,16 @@ bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/datadog-agent/maste
 ```
 
 
-Wait for the installation to complete.
+- Wait for the installation to complete.
 
 ## Creating a Monitoring Dashboard
-Log in to your Datadog account.
-In the Datadog application, navigate to Dashboards > New Dashboard.
-Add widgets to the dashboard to visualize metrics:
-Click on New Widget.
-Choose the metric you want to display (e.g., CPU usage, memory usage).
-Customize the widget's appearance and settings.
-Repeat for other relevant metrics.
+- Log in to your Datadog account.
+- In the Datadog application, navigate to Dashboards > New Dashboard.
+- Add widgets to the dashboard to visualize metrics:
+   - Click on New Widget.
+   - Choose the metric you want to display (e.g., CPU usage, memory usage).
+   - Customize the widget's appearance and settings.
+- Repeat for other relevant metrics.
 
 
 ## Tracking Read and Write Metrics
@@ -60,7 +64,7 @@ In the "Create Monitor" page for the read operations monitor:
 - Set the metric to system.io.r_s to monitor read operations per second.
 - Configure other parameters such as the time range and aggregation as needed.
 - Define alert conditions for read operations:
- - {{#is_alert}}Reads per second alert testif{{/is_alert}}
+   - {{#is_alert}}Reads per second alert testif{{/is_alert}}
 - Choose notification channels to receive alerts (e.g., email, Slack, PagerDuty).
 - Give your monitor a meaningful name and description to identify its purpose (e.g., "Read Operations Monitor").
 
