@@ -2,7 +2,11 @@
 
 ## Table of Contents
 [Prerequisites](#Prerequisites)
+
+
 [Getting Datadog API Key](#Getting Datadog API Key)
+
+
 [Installing Datadog Agent on Ubuntu](#Installing Datadog Agent on Ubuntu)
 [Creating a Monitoring Dashboard](#Creating a Monitoring Dashboard)
 [Tracking Read and Write Metrics](#Tracking Read and Write Metrics)
