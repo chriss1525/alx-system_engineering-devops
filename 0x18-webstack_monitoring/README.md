@@ -41,15 +41,6 @@ bash -c "$(curl -L https://raw.githubusercontent.com/DataDog/datadog-agent/maste
 
 - Wait for the installation to complete.
 
-## Creating a Monitoring Dashboard
-- Log in to your Datadog account.
-- In the Datadog application, navigate to Dashboards > New Dashboard.
-- Add widgets to the dashboard to visualize metrics:
-   - Click on New Widget.
-   - Choose the metric you want to display (e.g., CPU usage, memory usage).
-   - Customize the widget's appearance and settings.
-- Repeat for other relevant metrics.
-
 
 ## Tracking Read and Write Metrics
 To track read and write metrics per minute using the Datadog web interface and create separate monitors for them, follow these steps:
@@ -81,7 +72,14 @@ Create another monitor following the same steps for the write operations:
 
 - Save the monitor.
 
-Remember to tailor the thresholds, settings, and notifications to match your application's specific requirements.
+## Creating a Monitoring Dashboard
+- Log in to your Datadog account.
+- In the Datadog application, navigate to Dashboards > New Dashboard.
+- Add widgets to the dashboard to visualize metrics:
+   - Click on New Widget.
+   - Choose the metric you want to display (e.g., CPU usage, memory usage).
+   - Customize the widget's appearance and settings.
+- Repeat for other relevant metrics.
 
 ## Conclusion
 Congratulations! You've successfully set up Datadog, installed the agent on Ubuntu, created a monitoring dashboard, and started tracking read and write metrics. Feel free to customize and expand your monitoring setup as needed.
