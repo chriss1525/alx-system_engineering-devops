@@ -76,7 +76,7 @@ Create another monitor following the same steps for the write operations:
 - Set the metric to system.io.w_s to monitor write operations per second.
 - Configure parameters, alert conditions, and notification channels accordingly.
 - Define alert conditions for write operations:
- - {{#is_alert}}Writes per second alert testif{{/is_alert}}
+   -  {{#is_alert}}Writes per second alert testif{{/is_alert}}
 - Give this monitor a name and description (e.g., "Write Operations Monitor").
 
 - Save the monitor.
